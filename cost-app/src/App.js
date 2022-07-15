@@ -1,9 +1,18 @@
-import Addcost from "./Addcost";
+import Header from "./Header";
+import Balance from "./Balance";
+import IncomeExpense from "./IncomeExpense";
+import TransactionList from "./TransactionList";
+import AddTransaction from "./AddTransaction";
+
 import "./App.css";
 
 const App = () => (
   <div>
-    <Addcost />
+    <Header />
+    <Balance />
+    <IncomeExpense />
+    <TransactionList />
+    <AddTransaction />
   </div>
 );
 
