@@ -56,9 +56,6 @@ function App() {
       setNewTask(" ");
       setNewCost(" ");
       setNewType(" ");
-      console.log(setNewTask);
-      console.log(setNewCost);
-      console.log(setNewType);
 
       console.log(newEntry);
     }
