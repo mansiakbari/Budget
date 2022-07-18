@@ -1,19 +1,13 @@
-import Header from "./Header";
-import Balance from "./Balance";
-import IncomeExpense from "./IncomeExpense";
-import TransactionList from "./TransactionList";
-import AddTransaction from "./AddTransaction";
+import React from "react";
 
-import "./App.css";
+import Form from "./Form";
 
-const App = () => (
-  <div>
-    <Header />
-    <Balance />
-    <IncomeExpense />
-    <TransactionList />
-    <AddTransaction />
-  </div>
-);
+const App = () => {
+  return (
+    <div>
+      <Form />
+    </div>
+  );
+};
 
 export default App;
