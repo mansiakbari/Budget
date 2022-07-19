@@ -1,5 +1,6 @@
 import React from "react";
-import Test from "./Test";
+// import TestUseState from "./TestUseState";
+import TestUseEffect from "./TestUseEffect";
 
 // import Form from "./Form";
 
@@ -7,7 +8,8 @@ const App = () => {
   return (
     <div>
       {/* <Form /> */}
-      <Test />
+      {/* <TestUseState /> */}
+      <TestUseEffect />
     </div>
   );
 };
