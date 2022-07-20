@@ -1,6 +1,7 @@
 import React from "react";
+import Fetchdata from "./Fetchdata";
 // import TestUseState from "./TestUseState";
-import TestUseEffect from "./TestUseEffect";
+// import TestUseEffect from "./TestUseEffect";
 
 // import Form from "./Form";
 
@@ -9,7 +10,8 @@ const App = () => {
     <div>
       {/* <Form /> */}
       {/* <TestUseState /> */}
-      <TestUseEffect />
+      {/* <TestUseEffect /> */}
+      <Fetchdata />
     </div>
   );
 };
