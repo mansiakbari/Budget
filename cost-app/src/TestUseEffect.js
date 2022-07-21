@@ -4,7 +4,7 @@ const TestUseEffect = () => {
   const [set, setState] = useState(0);
   const [num, setNum] = useState(0);
   useEffect(() => {
-    alert("Clicked...");
+    console.log("Clicked...");
   }, [set]);
   return (
     <div>
@@ -14,7 +14,7 @@ const TestUseEffect = () => {
           setState(set + 1);
         }}
       >
-        Click for Alert
+        Click for console
       </button>
       <h1>{num}</h1>
       <button
