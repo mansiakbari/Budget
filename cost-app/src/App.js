@@ -1,5 +1,6 @@
 import React from "react";
-import Fetchdata from "./Fetchdata";
+// import Fetchdata from "./Fetchdata";
+import UseEffectDependency from "./UseEffectDependency";
 // import TestUseState from "./TestUseState";
 // import TestUseEffect from "./TestUseEffect";
 
@@ -11,7 +12,8 @@ const App = () => {
       {/* <Form /> */}
       {/* <TestUseState /> */}
       {/* <TestUseEffect /> */}
-      <Fetchdata />
+      {/* <Fetchdata /> */}
+      <UseEffectDependency />
     </div>
   );
 };
