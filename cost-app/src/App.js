@@ -1,6 +1,7 @@
 import React from "react";
+import Stopwatch from "./Stopwatch/Stopwatch";
 // import Fetchdata from "./Fetchdata";
-import UseEffectDependency from "./UseEffectDependency";
+// import UseEffectDependency from "./UseEffectDependency";
 // import TestUseState from "./TestUseState";
 // import TestUseEffect from "./TestUseEffect";
 
@@ -13,7 +14,8 @@ const App = () => {
       {/* <TestUseState /> */}
       {/* <TestUseEffect /> */}
       {/* <Fetchdata /> */}
-      <UseEffectDependency />
+      {/* <UseEffectDependency /> */}
+      <Stopwatch />
     </div>
   );
 };
