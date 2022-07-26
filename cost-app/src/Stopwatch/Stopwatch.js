@@ -1,39 +1,53 @@
 import React, { useState, useEffect } from "react";
+import Timer from "./Timer";
+import ControlButtons from "./ControlButtons";
 
-const Stopwatch = () => {
-  //   debugger;
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  let timer;
+function Stopwatch() {
+  const [isActive, setIsActive] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
+  const [time, setTime] = useState(0);
+
   useEffect(() => {
-    timer = setInterval(() => {
-      setSeconds(seconds + 1);
-      if (seconds === 59) {
-        setMinutes(minutes + 1);
-        setSeconds(0);
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  });
-  const reset = () => {
-    setMinutes(0);
-    setSeconds(0);
+    let interval = null;
+
+    if (isActive && isPaused === false) {
+      interval = setInterval(() => {
+        setTime((time) => time + 10);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isActive, isPaused]);
+
+  const handleStart = () => {
+    setIsActive(true);
+    setIsPaused(false);
   };
-  const stop = () => {
-    console.log(timer);
-    clearInterval(timer);
+
+  const handlePauseResume = () => {
+    setIsPaused(!isPaused);
   };
+
+  const handleReset = () => {
+    setIsActive(false);
+    setTime(0);
+  };
+
   return (
     <div>
-      <h1>
-        Timer <br></br>
-        {minutes < 10 ? "0" + minutes : minutes}:
-        {seconds < 10 ? "0" + seconds : seconds}
-      </h1>
-      <button onClick={reset}>Reset</button>
-      <button onClick={stop}>Stop</button>
+      <Timer time={time} />
+      <ControlButtons
+        active={isActive}
+        isPaused={isPaused}
+        handleStart={handleStart}
+        handlePauseResume={handlePauseResume}
+        handleReset={handleReset}
+      />
     </div>
   );
-};
+}
 
 export default Stopwatch;
